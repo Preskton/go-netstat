@@ -1,4 +1,6 @@
+//go:build darwin
 // +build darwin
+
 package netstat
 
 import (
@@ -53,7 +55,7 @@ var (
 
 // doNetstat - collect information about network port status
 func doNetstat(path string, fn AcceptFn) ([]SockTabEntry, error) {
-	return nil, nil
+	return nil, errors.New("not implemented")
 }
 
 // TCPSocks returns a slice of active TCP sockets containing only those
